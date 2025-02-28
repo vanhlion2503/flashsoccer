@@ -1,0 +1,11 @@
+# Nền tảng iOS tối thiểu mà app hỗ trợ
+platform :ios, '13.0'
+
+# Sử dụng framework thay vì static library (để hỗ trợ Swift)
+use_frameworks!
+
+# Khai báo target chính của app
+target 'Runner' do
+  # Cài đặt tất cả thư viện cần thiết của Flutter
+  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
+end
